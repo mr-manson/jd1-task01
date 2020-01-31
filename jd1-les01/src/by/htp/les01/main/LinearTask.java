@@ -3,7 +3,7 @@ package by.htp.les01.main;
 public class LinearTask {
 
 	public static void task01() {
-		// 01. Даны два действительных числа х и у. Вычислить их сумму, разность, произведение и частное.	
+		// 01. Даны два действительных числа х и у. Вычислить их сумму, разность, произведение и частное.
 		double x = 2.2;
 		double y = 3.2;
 		double summ = x + y;
@@ -49,8 +49,7 @@ public class LinearTask {
 	}
 
 	public static void task06() {
-		// 06. Написать код для решения задачи. В n малых бидонах 80 л молока. 
-		// Сколько литров молока в m больших бидонах,
+		// 06. Написать код для решения задачи. В n малых бидонах 80 л молока. Сколько литров молока в m больших бидонах,
 		// если в каждом большом бидоне на 12 л. больше, чем в малом?
 		int bidon1, volum1, litr1;
 		int bidon2, volum2, litr2;
@@ -66,7 +65,8 @@ public class LinearTask {
 	}
 
 	public static void task07() {
-		// 07. Дан прямоугольник, ширина которого в два раза меньше длины. Найти площадь прямоугольника
+		// 07. Дан прямоугольник, ширина которого в два раза меньше длины. Найти площадь
+		// прямоугольника
 		double length = 6;
 		double width = length / 2;
 		double area = length * width;
@@ -161,7 +161,8 @@ public class LinearTask {
 		double halfPer = perimeter2 / 2; // полупериметр
 		double area2 = (halfPer - AB2) * (halfPer - BC2) * (halfPer - AC2);
 		area2 = Math.sqrt(halfPer * area2);
-		System.out.println("Периметр треугольника - " + perimeter2 + " см" + "\n" + "Площадь треугольника - " + area2 + " см2");
+		System.out.println(
+				"Периметр треугольника - " + perimeter2 + " см" + "\n" + "Площадь треугольника - " + area2 + " см2");
 	}
 
 	public static void task14() {
@@ -223,8 +224,7 @@ public class LinearTask {
 	}
 
 	public static void task19() {
-		// 19. Дана сторона равностороннего треугольника. Найти площадь этого треугольника,
-		// его высоту, радиусы вписанной и описанной окружностей.
+		// 19. Дана сторона равностороннего треугольника. Найти площадь этого треугольника, его высоту, радиусы вписанной и описанной окружностей.
 		double a = 3;
 		double height;
 		height = Math.sqrt(a) / 2 * a;
@@ -238,7 +238,7 @@ public class LinearTask {
 	}
 
 	public static void task20() {
-		// 20. Известна длина окружности. Найти площадь круга, ограниченного этой окружностью		
+		// 20. Известна длина окружности. Найти площадь круга, ограниченного этой окружностью
 		double length = 30;
 		double radius = length / (2 * Math.PI);
 		double area = Math.PI * Math.pow(radius, 2);
@@ -300,7 +300,25 @@ public class LinearTask {
 	public static void task25() {
 		// 25. Вычислить корни квадратного уравнения ах 2 + bх + с = 0 с заданными коэффициентами a, b и с
 		// (предполагается, что а≠0 и что дискриминант уравнения неотрицателен)
-		//
+		double a = 3;
+		double b = -14;
+		double c = -5;
+		double D;
+		double x;
+		double x1;
+		double x2;
+
+		D = Math.pow(b, 2) - 4 * a * c;
+		if (D > 0) {
+			x1 = (-b + Math.sqrt(D)) / (2 * a);
+			x2 = (-b - Math.sqrt(D)) / (2 * a);
+			System.out.println("Уравнение имеет 2 корня: x1 = " + x1 + ", x2 = " + x2);
+		} else if (D == 0) {
+			x = -b / (2 * a);
+			System.out.println("Уравнение имеет 1 корень: x = " + x);
+		} else if (D < 0) {
+			System.out.println("Уравнение не имеет корней");
+		}
 	}
 
 	public static void task26() {
@@ -321,7 +339,7 @@ public class LinearTask {
 		int u2 = u * u;
 		int u4 = u2 * u2;
 		System.out.println("Число " + u + " в восьмой степени = " + u4 * u4);
-	
+
 		int uu = 2;
 		int uu2 = uu * uu;
 		int uu4 = uu2 * uu2;
@@ -348,10 +366,22 @@ public class LinearTask {
 		RR = 1 / RR; // 2
 		System.out.println("Сопротивление параллельного соединения - " + RR + " Ом");
 	}
+
 	public static void task31() {
 		// 31. Составить программу для вычисления пути, пройденного лодкой, если ее скорость в стоячей воде v км/ч,
 		// скорость течения реки v 1 км/ч, время движения по озеру t 1 ч, а против течения реки — t 2 ч
-		//
+		double vLace = 10;
+		double vOfRiver = 7;
+		double tLace = 20;
+		double tRiver = 30;
+		double sLace;
+		double sRiver;
+
+		sLace = vLace * tLace;
+		sRiver = (vLace - vOfRiver) * tRiver;
+
+		System.out.println("Расстояние пройденное по озеру - " + sLace);
+		System.out.println("Расстояние пройденное по озеру - " + sRiver);
 	}
 
 	public static void task32() {
@@ -359,72 +389,134 @@ public class LinearTask {
 		// Какое время будут показывать часы через р ч q мин r с
 		//
 	}
-			
+
 	public static void task33() {
 		// 33. Ввести любой символ и определить его порядковый номер, а также указать предыдущий и последующий символы
 		char a = 'i';
 		int b = (int) a;
-		char before = (char) (b-1);
-		char after = (char) (b+1);
-		System.out.println("Порядковый номер символа - " + b); 
-		System.out.println("Символ до - " + before); 
+		char before = (char) (b - 1);
+		char after = (char) (b + 1);
+		System.out.println("Порядковый номер символа - " + b);
+		System.out.println("Символ до - " + before);
 		System.out.println("Символ после " + after);
 	}
-			
+
 	public static void task34() {
-		// 34. Дана величина А, выражающая объем информации в байтах.
-		// Перевести А в более крупные единицы измерения информации
-		//
+		// 34. Дана величина А, выражающая объем информации в байтах. Перевести А в более крупные единицы измерения информации
+		double A = 200000;
+		double kA;
+		double mA;
+		double gA;
+		int x = 1024;
+
+		kA = A / x;
+		mA = kA / x;
+		gA = mA / x;
+
+		System.out.println(A + " Б это " + kA + " КБ, " + mA + " МБ, " + gA + " ГБ");
 	}
-			
+
 	public static void task35() {
 		// 35. Даны натуральные числа М и N. Вывести старшую цифру дробной части и младшую цифру целой части числа M/N
 		double m = 226;
 		double n = 17;
 		double div = m / n;
-		int div2 = (int)div;
-		int cel = (int)div%10;
-		int drob = (int)((div%div2)*10);
-					
+		int div2 = (int) div;
+		int cel = (int) div % 10;
+		int drob = (int) ((div % div2) * 10);
+
 		System.out.println("m / n = " + div);
 		System.out.println("Старшая цифра дробной части - " + drob);
-		System.out.println("Младшая цифра целой части - " + cel);		
+		System.out.println("Младшая цифра целой части - " + cel);
 	}
-	
+
 	public static void task36() {
 		// 36. Найти частное произведений четных и нечетных цифр четырехзначного числа
-		//
+		int x = 1234;
+		int n1, n2, n3, n4;
+		double rez;
+		double even = 0;
+		double odd = 0;
+
+		n4 = x % 10;
+		n3 = (x % 100) / 10;
+		n2 = (x % 1000) / 100;
+		n1 = (x / 1000);
+
+		if (n1 % 2 == 0) {
+			even += n1;
+		} else {
+			odd += n1;
+		}
+
+		if (n2 % 2 == 0) {
+			even += n2;
+		} else {
+			odd += n2;
+		}
+
+		if (n3 % 2 == 0) {
+			even += n3;
+		} else {
+			odd += n3;
+		}
+
+		if (n4 % 2 == 0) {
+			even += n4;
+		} else {
+			odd += n4;
+		}
+
+		rez = even / odd;
+		if (odd != 0) {
+			System.out.println(rez);
+		} else {
+			System.out.println("Деление на ноль!!!");
+		}
 	}
-	
+
 	public static void task37() {
-		// 37. Составить линейную программу, печатающую значение true, если указанное высказывание является истинным,
-		// и false — в противном случае
-		//1
-		//2
-		//3
-		//4
-		//5
-		//6
-		//7
-		//8
-		//9
+		// 37. Составить линейную программу, печатающую значение true, если указанное высказывание является истинным, и false — в противном случае
+		// 1
+		// 2
+		// 3
+		// 4
+		// 5
+		// 6
+		// 7
+		// 8
+		// 9
 	}
-	
+
 	public static void task38() {
-		// 38. Для данных областей составить линейную программу, которая печатает true,
-		// если точка с координатами (х, у) принадлежит закрашенной области, и false — в противном случае
+		// 38. Для данных областей составить линейную программу, которая печатает true, если точка с координатами (х, у)
+		// принадлежит закрашенной области, и false — в противном случае
 		//
 	}
-	
+
 	public static void task39() {
 		// 39. Дано действительное число х. Не пользуясь никакими другими арифметическими операциями, кроме умножения,
 		// сложения и вычитания, вычислите за минимальное число операций: 2x 4 - 3х 3 + 4х 2 - 5х + 6.
-		//
+		int x = 2;
+		int y;
+		int x2;
+
+		x2 = x * x;
+		y = (x2 * (2 * x2 - 3 * x + 4)) - 5 * x + 6;
+
+		System.out.println(y);
 	}
-	
+
 	public static void task40() {
-		// 40. Дано значение х. Получить значения -2х + 3х 2 - 4х 3 и 1 + 2х + 3х 2 + 4х 3 . 
-		// Позаботьтесь об экономии операций
-		//
+		// 40. Дано значение х. Получить значения -2х + 3х 2 - 4х 3 и 1 + 2х + 3х 2 + 4х3. Позаботьтесь об экономии операций
+		int x = 2;
+		int y1, y2;
+		int x2;
+
+		x2 = x * x;
+		y1 = -2 * x + (x2 * (3 - 4 * x));
+		y2 = 1 + 2 * x + (x2 * (3 + 4 * x));
+
+		System.out.println("y1 = " + y1 + ", y2 = " + y2);
 	}
 }
