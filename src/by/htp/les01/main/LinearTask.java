@@ -348,12 +348,43 @@ public class LinearTask {
 
 	public static void task28() {
 		// 28. Составить программу перевода радианной меры угла в градусы, минуты и секунды
-		//
+		double r = 0.996960;
+		double gr;
+		double m;
+		double s;
+		
+		gr = (180 / Math.PI) * r;
+		m = (gr - (int)gr) * 60;
+		s = (m - (int)m) * 60;
+		
+		System.out.println(r + " радиан равны " + (int)gr + "°" + (int)m + "'" + (int)s + "\"");
 	}
 
 	public static void task29() {
 		// 29. Найти (в радианах в градусах) все углы треугольника со сторонами а, b, с
-		//
+		int a = 5;
+		int b = 6;
+		int c = 7;
+		
+		double angleA, radA, grA;
+		double angleB, radB, grB;
+		double angleC, radC, grC;
+		
+		angleA = (Math.pow(a, 2) + Math.pow(c, 2) - Math.pow(b, 2)) / (2 * a * c);
+		radA = Math.acos(angleA);
+		grA = (double)(Math.round((radA*180/Math.PI)*100))/100;
+		
+		angleB = (Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b);
+		radB = Math.acos(angleB);
+		grB = (double)(Math.round((radB*180/Math.PI)*100))/100;
+		
+		angleC = (Math.pow(b, 2) + Math.pow(c, 2) - Math.pow(a, 2)) / (2 * b * c);
+		radC = Math.acos(angleC);
+		grC = (double)(Math.round((radC*180/Math.PI)*100))/100;
+		
+		System.out.println("Угол А равен " + grA + "° или " + (double)(Math.round(radA*100000))/100000 + " рад");
+		System.out.println("Угол B равен " + grB + "° или " + (double)(Math.round(radB*100000))/100000 + " рад");
+		System.out.println("Угол C равен " + grC + "° или " + (double)(Math.round(radC*100000))/100000 + " рад");
 	}
 
 	public static void task30() {
